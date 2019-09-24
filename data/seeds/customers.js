@@ -7,59 +7,59 @@ exports.seed = function (knex) {
       return knex('customers').insert([
         {
           id: 1,
-          Username: "CurlyCutie",
-          Password: "curls123",
-          Location: "San Jose, CA",
-          Email_Address: "joselinda@aol.com"
+          username: "CurlyCutie",
+          password: "curls123",
+          location: "San Jose, CA",
+          email_address: "joselinda@aol.com"
         },
 
         {
           id: 2,
-          Username: "RavenHaired",
-          Password: "locks123",
-          Location: "San Rafael, CA",
-          Email_Address: "rafalindo@gmail.com"
+          username: "RavenHaired",
+          password: "locks123",
+          location: "San Rafael, CA",
+          email_address: "rafalindo@gmail.com"
         }, 
         
         {
           id: 3,
-          Username: "BlondeAmbish",
-          Password: "blondie123",
-          Location: "San Carlos, CA",
-          Email_Address: "blondiesan@yahoo.com"
+          username: "BlondeAmbish",
+          password: "blondie123",
+          location: "San Carlos, CA",
+          email_address: "blondiesan@yahoo.com"
         }, 
         
         
         {
           id: 4,
-          Username: "HipsterDoode",
-          Password: "abun123",
-          Location: "San Jose, CA",
-          Email_Address: "definitelybun@msn.net"
+          username: "HipsterDoode",
+          password: "abun123",
+          location: "San Jose, CA",
+          email_address: "definitelybun@msn.net"
         }, 
         
         {
           id: 5,
-          Username: "Bajito",
-          Password: "justlow123",
-          Location: "San Francisco, CA",
-          Email_Address: "republicaguy@gmail.com"
+          username: "Bajito",
+          password: "justlow123",
+          location: "San Francisco, CA",
+          email_address: "republicaguy@gmail.com"
         }, 
         
         {
           id: 6,
-          Username: "RisosRiRi",
-          Password: "risos123",
-          Location: "San Carlos, CA",
-          Email_Address: "rihannari@yahoo.com"
+          username: "RisosRiRi",
+          password: "risos123",
+          location: "San Carlos, CA",
+          email_address: "rihannari@yahoo.com"
         }, 
         
         {
           id: 7,
-          Username: "NiceBeard",
-          Password: "beardo123",
-          Location: "San Rafael, CA",
-          Email_Address: "beardothegreat@msn.net"
+          username: "NiceBeard",
+          password: "beardo123",
+          location: "San Rafael, CA",
+          email_address: "beardothegreat@msn.net"
         }
 
 

@@ -13,20 +13,25 @@ exports.up = function (knex) {
             .notNullable();
 
         stylists
-            .string('Name', 128)
+            .string('email_address', 128)
+            .notNullable()
+            .unique();
+        stylists
+            .string('name', 128)
             .notNullable();
 
         stylists
-            .string('Bio', 128)
+            .string('bio', 128)
             .notNullable();
 
         stylists
-            .string('Location', 128)
+            .string('location', 128)
             .notNullable();
 
         stylists
-            .string('Specialty', 128)
+            .string('specialty', 128)
             .notNullable();
+
 
     });
 };

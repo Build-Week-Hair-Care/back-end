@@ -13,11 +13,11 @@ exports.up = function (knex) {
             .notNullable();
 
         customers
-            .string('Location', 128)
+            .string('location', 128)
             .notNullable();
 
         customers
-            .string('Email_Address', 128)
+            .string('email_address', 128)
             .notNullable()
             .unique();
 

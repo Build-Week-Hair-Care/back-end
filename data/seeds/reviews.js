@@ -10,7 +10,7 @@ exports.seed = function(knex) {
           customer_id: 1,
          stylist_id: 1,
          review_text:"I was a little skeptical at first that Mary Sue cuts dry hair but I was pleasantly surprised when the results were flawless.",
-         Photos:"https://res.cloudinary.com/restore2/image/upload/v1569343567/back-end-hair-care-buildweek/philipe-cavalcante-xe68QiMaDrQ-unsplash_1.jpg"
+         photos:"https://res.cloudinary.com/restore2/image/upload/v1569343567/back-end-hair-care-buildweek/philipe-cavalcante-xe68QiMaDrQ-unsplash_1.jpg"
          },
          
          {
@@ -25,7 +25,7 @@ exports.seed = function(knex) {
           id:3,
          customer_id:3,
          stylist_id:3,
-         reviewtext:"I like playing with different shades of blonde in my hair.  Lin is a genius. I was able to lift 3 shades and I am now rocking the best platinum blonde.",
+         review_text:"I like playing with different shades of blonde in my hair.  Lin is a genius. I was able to lift 3 shades and I am now rocking the best platinum blonde.",
          photos:"https://res.cloudinary.com/restore2/image/upload/v1569343570/back-end-hair-care-buildweek/kareya-saleh-tLKOj6cNwe0-unsplash.jpg"
          },
          

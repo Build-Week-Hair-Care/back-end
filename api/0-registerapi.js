@@ -43,8 +43,8 @@ registerapi.post('/stylist', (req, res) => {
             console.log('hi');
             console.log(savedStylist)
             res.status(201).json(savedStylist);
-
         })
+        
         .catch(error => {
             res.status(500).json(error);
         });

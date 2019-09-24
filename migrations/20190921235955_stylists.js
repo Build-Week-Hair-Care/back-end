@@ -24,8 +24,6 @@ exports.up = function (knex) {
             .string('Location', 128)
             .notNullable();
 
-
-
         stylists
             .string('Specialty', 128)
             .notNullable();

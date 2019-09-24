@@ -8,7 +8,27 @@ exports.up = function (knex) {
             .notNullable()
             .unique();
 
-        stylists.string('password', 128).notNullable();
+        stylists
+            .string('password', 128)
+            .notNullable();
+
+        stylists
+            .string('Name', 128)
+            .notNullable();
+
+        stylists
+            .string('Bio', 128)
+            .notNullable();
+
+        stylists
+            .string('Location', 128)
+            .notNullable();
+
+
+
+        stylists
+            .string('Specialty', 128)
+            .notNullable();
 
     });
 };

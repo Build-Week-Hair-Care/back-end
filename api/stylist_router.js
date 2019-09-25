@@ -2,12 +2,15 @@ const express = require('express');
 const router = express.Router();
 const stylist = require('./stylist_model')
 const bcrypt = require('bcryptjs');
+const restricted = require('../auth/restricted-middleware')
+const jwt = require('jsonwebtoken');
+const secrets = require('../auth/secrets')
 
 //login
 
 
  // findByID
- router.get('/:id', (req, res) => {
+ router.get('/:id', restricted, (req, res) => {
     stylist.findById(req.params['id'])
     .then(stylist => (res.status(200).json(stylist)))
     .catch(error => res.status(500).send(error)
@@ -16,7 +19,7 @@ const bcrypt = require('bcryptjs');
 
 
   //delete
-  router.delete('/:id', (req, res) => {
+  router.delete('/:id', restricted, (req, res) => {
     stylist.remove(req.params['id'])
     .then(reviews => (res.status(200).json(reviews)))
     .catch(error => res.status(500).send('Server Error')
@@ -24,7 +27,7 @@ const bcrypt = require('bcryptjs');
   });
 
   // update
-  router.put('/:id', (req, res) => {
+  router.put('/:id', restricted, (req, res) => {
     stylist.update(req.params['id'], req.body)
     .then(reviews => (res.status(200).json(reviews)))
     .catch(error => res.status(500).send(error)
@@ -32,7 +35,7 @@ const bcrypt = require('bcryptjs');
   });
 
 // findByLocation
-  router.get('/location/:location', (req, res) => {
+  router.get('/location/:location', restricted, (req, res) => {
     stylist.findByLocation(req.params['location'])
         .then((data) => {
             if (data === undefined) { res.status(404).json({ message: "Stylists with the specified location do not exist." }) }
@@ -44,7 +47,7 @@ const bcrypt = require('bcryptjs');
 });
 
 
-
+// Register
 router.post('/', (req, res) => {
     console.log(req.body);
     let { name, username, password, location, specialty, bio, email_address } = req.body;

@@ -3,7 +3,6 @@ require('dotenv').config();
 const express = require('express');
 const server = express();
 
-// const loginapi = require('./api/1-loginapi')
 const reviews = require('./api/review_router')
 const stylists = require('./api/stylist_router')
 const customers = require('./api/customer_router')
@@ -11,7 +10,6 @@ const customers = require('./api/customer_router')
 
 server.use(express.json());
 
-// server.use('/api/login', loginapi);
 server.use('/api/reviews', reviews);
 server.use('/api/stylists', stylists);
 server.use('/api/customers', customers);

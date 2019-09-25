@@ -4,7 +4,6 @@ const customer = require('./customer_model')
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const secrets = require('../auth/secrets')
-const token = require('../auth/restricted-middleware');
 
 //login
 

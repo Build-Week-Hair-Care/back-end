@@ -6,7 +6,7 @@ const secrets = require('../auth/secrets')
 
 
 const db = require('../data/db-config');
-const Users = require('./5-usecasesmodel');
+const Users = require('./models');
 const token = require('../auth/restricted-middleware');
 
 const loginapi = express();

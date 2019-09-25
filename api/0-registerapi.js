@@ -5,7 +5,7 @@ const secrets = require('../auth/secrets')
 
 
 const db = require('../data/db-config');
-const Users = require('./5-usecasesmodel');
+const Users = require('./models');
 const restricted = require('../auth/restricted-middleware');
 
 const registerapi = express();
@@ -44,7 +44,7 @@ registerapi.post('/stylist', (req, res) => {
             console.log(savedStylist)
             res.status(201).json(savedStylist);
         })
-        
+
         .catch(error => {
             res.status(500).json(error);
         });

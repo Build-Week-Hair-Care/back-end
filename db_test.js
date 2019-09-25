@@ -1,7 +1,6 @@
-const helper_functions = require('./api/models');
 const reviews_db = require('./api/review_model')
 const stylist_db = require('./api/stylist_model')
-
+const customer_db = require('./api/customer_model')
 
 function test_reviews(){
     // Create a review
@@ -43,4 +42,17 @@ function test_stylists(){
 
 }
 
-test_stylists()
+function test_customers(){
+    // Create a review
+    customer_db.create({
+       username: "CurlyCutie"+Math.random(),
+        password: "curls123"+Math.random(),
+        location: "San Jose, CA",
+        email_address: "joselinda@aol.com"+Math.random()
+      }).then(customer => console.log(customer));
+      customer_db.findByUsername('Update Sue122').then(custom => console.log(custom))
+
+}
+
+
+test_customers();

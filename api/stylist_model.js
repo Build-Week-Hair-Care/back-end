@@ -5,7 +5,8 @@ module.exports = {
     create,
     remove,
     update,
-    findByLocation
+    findByLocation,
+    findByUsername
 };
 
 function findById(id) {
@@ -35,4 +36,11 @@ function update(id, stylist) {
   function findByLocation(location) {
     return db('stylists')
       .where('stylists.location', location)
+  }
+
+
+  function findByUsername(username) {
+    return db('stylists')
+      .where({ username })
+      .first();
   }

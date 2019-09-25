@@ -68,6 +68,39 @@ router.post('/', (req, res) => {
         });
 });
 
+//login
+router.post('/login', (req, res) => {
+    let { username, password } = req.body;
+    stylist.findByUsername( username )
+        .first()
+        .then(stylist => {
+            if (stylist && bcrypt.compareSync(password, stylist.password)) {
+                const token = generateToken(stylist);
+                res.status(200).json( token );
+            } else {
+                res.status(401).json({ message: 'Invalid Stylist Credentials' });
+            }
+        })
+        .catch(error => {
+            console.log(error)
+            res.status(500).json(error);
+        });
+});
+
+
+
+function generateToken(user) {
+    const payload = {
+        subject: user.id,
+        username: user.username,
+    };
+    const options = {
+        expiresIn: '1d',
+    };
+    // bring in the secret from the secrets file
+    return jwt.sign(payload, secrets.jwtSecret, options);
+}
+
 
 
 module.exports = router;

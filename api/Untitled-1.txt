@@ -1,0 +1,39 @@
+functional requirements
+
+1. User can signup/create account as either a “Stylist” or “Customer”. At a minimum, you must require a username, password, location, and an email address at signup. (mobile, web)
+write tests
+
+2. Authenticated “Customer” can search for nearby stylists based on their address, and view a collection of photos and reviews of their past work. (mobile, web)
+write endpoint with location parameter 
+
+3. Authenticated “Customer” can upload photos, a short review and rate both the stylist and the haircut received. (mobile)
+
+
+4. Authenticated “Customer” can update or delete photos, reviews and “Stylist” ratings created with their user account. (mobile)
+
+5. Authenticated “Stylist” can create a detailed profile and upload photos of their past work. (web, mobile)
+Authenticated “Stylist” can search for other nearby “Stylists” on the HairCare platform to research competitors. (web, mobile)
+
+6. Authenticated “Stylist” can update and delete their own profile and photos uploaded using their account (but not photos, reviews or ratings posted by “Customers”) (web, mobile)
+
+
+
+workflow:
+get functional requirements
+understand what i'm trying to do
+
+create db migration
+query the database
+
+create seed file
+
+query the database
+
+write database helpers
+one at a time...........
+then test in test file
+
+write endpoint
+
+write a test for the functional requirement
+

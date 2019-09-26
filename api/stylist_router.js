@@ -79,7 +79,7 @@ router.post('/login', (req, res) => {
         .then(stylist => {
             if (stylist && bcrypt.compareSync(password, stylist.password)) {
                 const token = generateToken(stylist);
-                res.status(200).json( token );
+                res.status(200).json( {id: stylist.id,token });
             } else {
                 res.status(401).json({ message: 'Invalid Stylist Credentials' });
             }

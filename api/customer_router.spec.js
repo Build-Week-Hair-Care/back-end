@@ -20,14 +20,17 @@ describe('customer', () => {
     expect(res.status).toBe(200);
   });
 
-  it('post /', async () => {
+  it('get /', async () => {
     const res = await request(server).get('/api/customers/login');
     expect(res.status).toBe(200);
     expect(res.body[1]).toEqual({
-      "email": "fakeemail@diningroom.com",
-      "id": 2,
-      "name": "Ramona Lee",
-    });
+        username: username,
+        password: hash,  
+        location: location, 
+        email_address: email_address
+      });
 
   });
 });
+
+module.exports = server

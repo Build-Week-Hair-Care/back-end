@@ -5,24 +5,32 @@
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": " cross-env DB_ENV=testing jest --watch --verbose --runInBand"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Build-Week-Hair-Care/back-end.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "LaVon Mejia <lavonmejia@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Build-Week-Hair-Care/back-end/issues"
   },
   "homepage": "https://github.com/Build-Week-Hair-Care/back-end#readme",
   "devDependencies": {
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2",
+    "cross-env": "^6.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "express-router": "0.0.1",
